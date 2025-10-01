@@ -24,9 +24,19 @@ using Microsoft.Extensions.Hosting;
 
 namespace SimpleSecurityFilter;
 
+/// <summary>
+/// Extension methods to add the rate limiting middleware to the HTTP request pipeline.
+/// </summary>
 public static class RateLimitMiddlewareExtensions
 {
-    public static void ConfigureRateLimiting(this IHostApplicationBuilder builder, SimpleSecurityOptions config, Action<string>? logAction = null)
+    /// <summary>
+    /// Configures rate limiting services
+    /// </summary>
+    /// <param name="builder">The application builder.</param>
+    /// <param name="config">Configuration options. If null, defaults will be used.</param>
+    /// <param name="logAction">Optional logging action for rate limit rejection events.</param>
+    /// <returns>The updated application builder.</returns>
+    public static IHostApplicationBuilder ConfigureRateLimiting(this IHostApplicationBuilder builder, SimpleSecurityOptions config, Action<string>? logAction = null)
     {
         builder.Services.AddRateLimiter(options =>
         {
@@ -57,5 +67,7 @@ public static class RateLimitMiddlewareExtensions
                 await context.HttpContext.Response.WriteAsync("Too many requests", token);
             };
         });
+
+        return builder;
     }
 }

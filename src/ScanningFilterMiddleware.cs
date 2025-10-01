@@ -123,8 +123,14 @@ public class ScanningFilterMiddleware(RequestDelegate next, ILogger<ScanningFilt
 /// </summary>
 public static class ScanningFilterMiddlewareExtensions
 {
-    public static void UseScanningFilter(this IApplicationBuilder builder)
+    /// <summary>
+    /// Adds the ScanningFilterMiddleware to the HTTP request pipeline.
+    /// </summary>
+    /// <param name="builder">The application builder.</param>
+    /// <returns>The updated application builder.</returns>
+    public static IApplicationBuilder UseScanningFilter(this IApplicationBuilder builder)
     {
         builder.UseMiddleware<ScanningFilterMiddleware>();
+        return builder;
     }
 }
