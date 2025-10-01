@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>SimpleSecurityFilter</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Title>Simple Security Filter</Title>
     <Authors>duplicati</Authors>
     <Owners>duplicati</Owners>
@@ -16,7 +16,7 @@
     <PackageProjectUrl>https://github.com/duplicati/simplesecurityfilter</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>Simple Security Filter for ASP.NET Core</Description>
-    <PackageReleaseNotes>Changed name of config class</PackageReleaseNotes>
+    <PackageReleaseNotes>Simplified usage with helper extension methods</PackageReleaseNotes>
     <Copyright>Copyright 2025, Duplicati Inc</Copyright>
     <PackageTags>ASP.NET Security Filter</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
