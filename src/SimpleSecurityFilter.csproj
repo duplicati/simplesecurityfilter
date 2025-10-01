@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>SimpleSecurityFilter</PackageId>
+    <Version>1.0.0</Version>
+    <Title>Simple Security Filter</Title>
+    <Authors>duplicati</Authors>
+    <Owners>duplicati</Owners>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/duplicati/simplesecurityfilter</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>Simple Security Filter for ASP.NET Core</Description>
+    <PackageReleaseNotes>Initial relase.</PackageReleaseNotes>
+    <Copyright>Copyright 2025, Duplicati Inc</Copyright>
+    <PackageTags>ASP.NET Security Filter</PackageTags>
+    <PackageReadmeFile>docs\README.md</PackageReadmeFile>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.9" />    
+    <PackageReference Include="Microsoft.AspNetCore.RateLimiting" Version="7.0.0-rc.2.22476.2" />
+  </ItemGroup>
+
+</Project>
