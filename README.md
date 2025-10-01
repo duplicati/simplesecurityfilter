@@ -23,7 +23,7 @@ if (config.RateLimitEnabled)
     app.UseRateLimiter();
 
 if (config.FilterPatterns)
-    app.UseSecurityFilter();
+    app.UseScanningFilter();
 
 
 ```
