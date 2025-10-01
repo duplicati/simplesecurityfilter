@@ -22,7 +22,7 @@ namespace SimpleSecurityFilter;
 /// <summary>
 /// Security middleware settings
 /// </summary>
-public sealed record IpRateLimitOptions
+public sealed record SimpleSecurityOptions
 {
     /// <summary>
     /// Determine if the middleware should filter preset attack patterns.
@@ -42,7 +42,7 @@ public sealed record IpRateLimitOptions
     /// <summary>
     /// Provides a default configuration, that enables pattern filtering but disables rate limiting.
     /// </summary>
-    public static IpRateLimitOptions Default => new()
+    public static SimpleSecurityOptions Default => new()
     {
         FilterPatterns = true,
         RateLimitEnabled = false,

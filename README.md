@@ -12,7 +12,7 @@ Besides the filters, this package also has a rate limiter config that leverages 
 using SimpleSecurityFilter;
 
 var builder = WebApplication.CreateBuilder(args);
-var config = builder.Configuration.GetSection("Security").Get<IpRateLimitOptions>()
+var config = builder.Configuration.GetSection("Security").Get<SimpleSecurityOptions>()
     ?? IpRateLimitOptions.Default;
 
 if (config.RateLimitEnabled)

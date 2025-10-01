@@ -26,7 +26,7 @@ namespace SimpleSecurityFilter;
 
 public static class RateLimitMiddlewareExtensions
 {
-    public static void ConfigureRateLimiting(this IHostApplicationBuilder builder, IpRateLimitOptions config, Action<string>? logAction = null)
+    public static void ConfigureRateLimiting(this IHostApplicationBuilder builder, SimpleSecurityOptions config, Action<string>? logAction = null)
     {
         builder.Services.AddRateLimiter(options =>
         {
